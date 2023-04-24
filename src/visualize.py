@@ -12,6 +12,8 @@ args = parser.parse_args()
 import os
 import json
 from collections import Counter,defaultdict
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # open the input path
@@ -24,18 +26,17 @@ if args.percent:
         counts[args.key][k] /= counts['_all'][k]
 
 # print the count values
-#items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-#for k,v in items:
-#    print(k,':',v)
+items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
+for k,v in items:
+    print(k,':',v)
 
-items = sorted(counts[args.key].items(), key=lambda item: item[1])[:10]
-
-keys = [item[0] for item in items]
-values = [item[1] for item in items]
-plt.barh(keys, values)
-
-plt.title(args.key + ' Counts')
-plt.xlabel('Count')
-plt.ylabel('Key')
-
-plt.savefig('counts.png')
+print("print(items)=", items)
+items_ten = items[:10]
+print("print(items_ten)=", items_ten)
+keys = [items[0] for items in items_ten]
+#keys = list(items_ten.keys())
+print("print(keys)=", keys)
+values = [items[1] for items in items_ten]
+print("print(values)=", values)
+plt.bar(keys, values)
+plt.savefig("output.png")
