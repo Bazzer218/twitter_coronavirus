@@ -34,15 +34,15 @@ for k,v in items:
 print("print(items)=", items)
 items_ten = items[:10]
 print("print(items_ten)=", items_ten)
-keys = [items[0] for items in items_ten]
+keys = [item[0] for item in items_ten]
 #keys = list(items_ten.keys())
 print("print(keys)=", keys)
-values = [items[1] for items in items_ten]
+values = [item[1] for item in items_ten]
 print("print(values)=", values)
 keys = keys[::-1]
 values = values[::-1]
-plt.bar(keys, values)
+plt.bar(range(len(keys)), values)
 #plt.xlabel("Country Key", size = 15)
 #plt.ylabel("Number of occurences", size = 15)
 #plt.title("Coronavirus Lang", size = 18)
-plt.savefig("output4.png")
+plt.savefig("output5.png")
