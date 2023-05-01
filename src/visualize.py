@@ -43,7 +43,7 @@ keys = keys[::-1]
 values = values[::-1]
 plt.bar(range(len(keys)), values)
 plt.xticks(range(len(keys)), keys)
-#plt.xlabel("Country Key", size = 15)
-#plt.ylabel("Number of occurences", size = 15)
-#plt.title("Coronavirus Lang", size = 18)
-plt.savefig("output7.png")
+plt.xlabel("Country Key", size = 15)
+plt.ylabel("Number of occurences", size = 15)
+plt.title("#coronavirus", size = 18)
+plt.savefig("coronvirus_lang.png")
