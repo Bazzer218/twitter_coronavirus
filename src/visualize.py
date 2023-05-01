@@ -31,17 +31,17 @@ items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), rev
 for k,v in items:
     print(k,':',v)
 
-print("print(items)=", items)
+#print("print(items)=", items)
 items_ten = items[:10]
-print("print(items_ten)=", items_ten)
+#print("print(items_ten)=", items_ten)
 keys = [item[0] for item in items_ten]
 #keys = list(items_ten.keys())
-print("print(keys)=", keys)
+#print("print(keys)=", keys)
 values = [item[1] for item in items_ten]
-print("print(values)=", values)
+#print("print(values)=", values)
 keys = keys[::-1]
 values = values[::-1]
-plt.bar(range(len(keys)), values)
+plt.bar(keys, values)
 #plt.xlabel("Country Key", size = 15)
 #plt.ylabel("Number of occurences", size = 15)
 #plt.title("Coronavirus Lang", size = 18)
