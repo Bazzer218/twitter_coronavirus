@@ -38,5 +38,5 @@ keys = [items[0] for items in items_ten]
 print("print(keys)=", keys)
 values = [items[1] for items in items_ten]
 print("print(values)=", values)
-plt.bar(keys, values)
+plt.bar(range(len(keys)), values)
 plt.savefig("output.png")
