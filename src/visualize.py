@@ -15,6 +15,7 @@ from collections import Counter,defaultdict
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # open the input path
 with open(args.input_path) as f:
@@ -40,5 +41,11 @@ values = [items[1] for items in items_ten]
 print("print(values)=", values)
 keys = keys[::-1]
 values = values[::-1]
-plt.bar(range(len(keys)), values)
+df = pd.DataFrame({"keys":keys,
+                  "values":values})
+df_sorted = df.sort_values('values')
+plt.bar('keys', 'values', data=df_sorted)
+#plt.xlabel("Country Key", size = 15)
+#plt.ylabel("Number of occurences", size = 15)
+#plt.title("Coronavirus Lang", size = 18)
 plt.savefig("output.png")
