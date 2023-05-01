@@ -41,8 +41,9 @@ values = [item[1] for item in items_ten]
 #print("print(values)=", values)
 keys = keys[::-1]
 values = values[::-1]
-plt.bar(keys, values)
+plt.bar(range(len(keys)), values)
+plt.xticks(range(len(keys)), keys)
 #plt.xlabel("Country Key", size = 15)
 #plt.ylabel("Number of occurences", size = 15)
 #plt.title("Coronavirus Lang", size = 18)
-plt.savefig("output6.png")
+plt.savefig("output7.png")
