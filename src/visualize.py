@@ -39,15 +39,10 @@ keys = [items[0] for items in items_ten]
 print("print(keys)=", keys)
 values = [items[1] for items in items_ten]
 print("print(values)=", values)
-#keys = keys[::-1]
-#values = values[::-1]
-df = pd.DataFrame({"keys":keys,
-                  "values":values})
-df_sorted = df.sort_values('values')
-print("keys=", keys)
-print("values=", values)
-plt.bar('keys', 'values', data=df_sorted)
+keys = keys[::-1]
+values = values[::-1]
+plt.bar(range(len(keys)), values)
 #plt.xlabel("Country Key", size = 15)
 #plt.ylabel("Number of occurences", size = 15)
 #plt.title("Coronavirus Lang", size = 18)
-plt.savefig("output2.png")
+plt.savefig("output3.png")
