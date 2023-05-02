@@ -31,14 +31,15 @@ for key in args.keys:
                 pass
             yaxis.append(sumofnum)
 
-    plt.plot(np.arange(len(yaxis)), yaxis, label=key)
+    plt.plot(np.arange(len(yaxis)), yaxis, label=key, linewidth=2)
 
+#print(yaxis)
 plt.xlabel("2020 Date (Month)")
 plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
-plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11"])
-plt.savefig("lineplot5.png")
+plt.xticks([0, 60, 121, 182, 244, 305], ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
+plt.savefig("lineplot7.png")
 
 
 
