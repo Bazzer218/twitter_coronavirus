@@ -5,24 +5,21 @@ import json
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('--input_dir',required=True)
-parser.add_argument('--keys', nargs='+', required=True)
-args = parser.parse_args()
-
 from collections import Counter, defaultdict
 from glob import glob
-
-import os
-import json
 from collections import Counter,defaultdict
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--input_dir', required=True)
+parser.add_argument('--keys', nargs='+', required=True)
+args = parser.parse_args()
 input_files = glob(args.input_dir + '/*')
 
 #load each key
 for key in args.keys:
     yaxis =[]
     total = defaultdict(lambda: Counter())
+    
     for path in sorted(input_files):
         with open(path) as f:
             tmp = json.load(f) 
@@ -34,15 +31,14 @@ for key in args.keys:
                 pass
             yaxis.append(sumofnum)
 
-#visualization
     plt.plot(np.arange(len(yaxis)), yaxis, label=key)
 
-plt.xlabel("Date(2020)")
+plt.xlabel("2020 Date (Month)")
 plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
 plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11"])
-plt.savefig("lineplot3.png")
+plt.savefig("lineplot5.png")
 
 
 
