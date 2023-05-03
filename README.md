@@ -3,4 +3,3 @@
 ![Tweets with #korean by language](korean_language.png)
 ![Tweets with #korean by country](korean_country.png)
 
-
