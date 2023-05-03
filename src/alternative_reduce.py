@@ -1,4 +1,4 @@
-#imports
+#!/usr/bin/env python3
 import matplotlib
 import numpy as np
 import json
@@ -12,8 +12,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--input_dir', required=True)
 parser.add_argument('--keys', nargs='+', required=True)
 args = parser.parse_args()
+
 input_files = glob(args.input_dir + '/*')
-#load each key
 
 for key in args.keys:
     yaxis = []
@@ -32,13 +32,12 @@ for key in args.keys:
     
     plt.plot(np.arange(len(yaxis)), yaxis, label=key)
 
-#print(yaxis)
-plt.xlabel("2020 Date (Month)")
+plt.xlabel("2020 Date Month")
 plt.ylabel("Number of Tweets")
-plt.title("Tweets Per Hashtag(2020)")
+plt.title("Tweets Per Hashtag 2020")
 plt.legend()
-plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11 "])
-plt.savefig("lineplot3.png", bbox_inches="tight")
+plt.xticks([0, 60, 121, 182, 244, 305], ["Jan", "Mar", "May", "Jul", "Sep", "Nov"])
+plt.savefig("lineplot4.png", bbox_inches="tight")
 
 
 
