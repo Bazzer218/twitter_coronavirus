@@ -1,4 +1,7 @@
-![AAA for #coronavirus](coronavirus_lang.png)
+![Tweets with #coronavirus by language](coronavirus_language.png)
+![Tweets with #coronavirus by country](coronavirus_country.png)
+![Tweets with #코로나바이러 by language](#코로나바이러_language.png)
+![Tweets with #코로나바이러 by country](#코로나바이러_country.png)
 
 
 
