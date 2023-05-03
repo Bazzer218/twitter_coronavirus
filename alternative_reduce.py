@@ -38,8 +38,8 @@ plt.xlabel("2020 Date (Month)")
 plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
-plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11"])
-plt.savefig("lineplot13.png")
+plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11 "])
+plt.savefig("lineplot15.png")
 
 
 
