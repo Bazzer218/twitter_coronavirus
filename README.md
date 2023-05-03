@@ -8,5 +8,7 @@ In this project, I use geotagged tweets sent in 2020 to create visualizations sh
 
 ![Tweets with #korean by country](korean_country.png)
 
+Below, I created a line plot that should show the number of occurrences of different hashtags over the course of 2022. 
+
 ![Number of Tweets By Hashtag](lineplot2.png)
 
