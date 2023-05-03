@@ -38,9 +38,6 @@ plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
 plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11 "])
-for key in args.keys:
-    yaxis_rand = [random.randint(0, 100) for i in range(len(input_files))]
-    plt.plot(np.arange(len(yaxis_rand)), yaxis_rand, label=key + ' (random)', linestyle='--', linewidth=1, alpha=0.5)
 plt.savefig("lineplot223.png")
 
 
