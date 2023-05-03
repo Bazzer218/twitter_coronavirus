@@ -14,7 +14,7 @@ parser.add_argument('--input_dir', required=True)
 parser.add_argument('--keys', nargs='+', required=True)
 args = parser.parse_args()
 input_files = glob(args.input_dir + '/*')
-
+yaxis = []
 #load each key
 for key in args.keys:
     total = defaultdict(lambda: Counter())
@@ -39,7 +39,7 @@ plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
 plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11 "])
-plt.savefig("ZZZ.png")
+plt.savefig("lineplot123.png")
 
 
 
