@@ -8,3 +8,5 @@ In this project, I use geotagged tweets sent in 2020 to create visualizations sh
 
 ![Tweets with #korean by country](korean_country.png)
 
+![Number of Tweets By Hashtag](lineplot2.png)
+

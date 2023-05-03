@@ -3,7 +3,7 @@ import matplotlib
 import numpy as np
 import json
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 import argparse
 from collections import Counter, defaultdict
 from glob import glob
@@ -22,7 +22,7 @@ for key in args.keys:
     for path in sorted(input_files):
         with open(path) as f:
             tmp = json.load(f) 
-            sumofnum = 0
+            sumofnum = 0 
             try:
                 for k in tmp[key]:
                     sumofnum += tmp[key][k]
@@ -36,10 +36,5 @@ plt.xlabel("2020 Date Month")
 plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag 2020")
 plt.legend()
-plt.xticks([0, 60, 121, 182, 244, 305], ["Jan", "Mar", "May", "Jul", "Sep", "Nov"])
-plt.savefig("lineplot6.png", bbox_inches="tight")
-
-
-
-
-
+plt.xticks([0, 60, 121, 182, 244, 305], ["Jan", "Mar", "May", "Jul", "Sep", "Nov"]) 
+plt.savefig("lineplot7.png", bbox_inches="tight")
