@@ -8,7 +8,7 @@ import argparse
 from collections import Counter, defaultdict
 from glob import glob
 from collections import Counter,defaultdict
-
+import random
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_dir', required=True)
 parser.add_argument('--keys', nargs='+', required=True)
@@ -30,7 +30,6 @@ for key in args.keys:
                 pass
             yaxis.append(sumofnum)
     
-    yaxis = [random.randint(0, 100) for i in range(len(input_files))]
     plt.plot(np.arange(len(yaxis)), yaxis, label=key, linewidth=2)
 
 #print(yaxis)
@@ -39,7 +38,10 @@ plt.ylabel("Number of Tweets")
 plt.title("Tweets Per Hashtag(2020)")
 plt.legend()
 plt.xticks([0, 60, 121, 182, 244, 305], ["1", "3", "5", "7", "9", "11 "])
-plt.savefig("lineplot123.png")
+for key in args.keys:
+    yaxis_rand = [random.randint(0, 100) for i in range(len(input_files))]
+    plt.plot(np.arange(len(yaxis_rand)), yaxis_rand, label=key + ' (random)', linestyle='--', linewidth=1, alpha=0.5)
+plt.savefig("lineplot223.png")
 
 
 
